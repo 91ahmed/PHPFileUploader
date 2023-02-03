@@ -1,0 +1,17 @@
+{
+    "name": "phpuploader/php-file-uploader",
+    "description": "Verify and upload files with php.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PhpFileUploader\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ahmedhassan",
+            "email": "ahmedh12491@gmail.com"
+        }
+    ],
+    "require": {}
+}
