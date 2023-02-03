@@ -10,7 +10,7 @@ A simple php library for uploading files.
 #### Installation
 via composer
 ``` bash
-
+composer require phpuploader/phpfileuploader
 ```
 
 #### Simple Example
