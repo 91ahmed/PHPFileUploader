@@ -15,11 +15,11 @@ via composer
 
 #### Simple Example
 ``` php
-    require ('vendor/autoload.php');
+require ('vendor/autoload.php');
 
-    $file = new \PhpFileUploader\Uploader('inputfilename'); // Specify the input file name.
-    $file->path('/files/'); // Specify the files destination path.
-    $file->upload(); // move uploaded files (You should call this method at the end).
+$file = new \PhpFileUploader\Uploader('inputfilename'); // Specify the input file name.
+$file->path('/files/'); // Specify the files destination path.
+$file->upload(); // move uploaded files (You should call this method at the end).
 ```
 
 #### Generate random name
@@ -28,10 +28,10 @@ If you don't call this method the files will be uploaded with their original nam
 
 **Ex:**
 ``` php
-    $file = new \PhpFileUploader\Uploader('inputfilename');
-    $file->path('/files/');
-    $file->createRandomName(); // Generates random name.
-    $file->upload();
+$file = new \PhpFileUploader\Uploader('inputfilename');
+$file->path('/files/');
+$file->createRandomName(); // Generates random name.
+$file->upload();
 ```
 
 #### Create custom name
@@ -39,10 +39,10 @@ You can use this method ```createFileName()``` to create a custom name for the f
 
 **Ex:**
 ``` php
-    $file = new \PhpFileUploader\Uploader('inputfilename');
-    $file->path('/files/');
-    $file->createFileName('myCustomName'); // Create custom name.
-    $file->upload();
+$file = new \PhpFileUploader\Uploader('inputfilename');
+$file->path('/files/');
+$file->createFileName('myCustomName'); // Create custom name.
+$file->upload();
 ```
 
 #### Check errors
@@ -56,30 +56,30 @@ The library will verify the files to check whether the file exists, selected or 
 
 #### Full Example with HTML form
 ``` php
-    require ('vendor/autoload.php');
+require ('vendor/autoload.php');
 
-    if (isset($_POST['upload'])) 
-    {
-        $file = new \PhpFileUploader\Uploader('myFile'); // Specify the input file name.
-        $file->path('/files/'); // Specify the files destination path.
-        $file->createRandomName(); // Generate random name.
-        $file->upload(); // move uploaded files (You should call this method at the end).
+if (isset($_POST['upload'])) 
+{
+    $file = new \PhpFileUploader\Uploader('myFile'); // Specify the input file name.
+    $file->path('/files/'); // Specify the files destination path.
+    $file->createRandomName(); // Generate random name.
+    $file->upload(); // move uploaded files (You should call this method at the end).
 
-        // Display errors as array
-        $file->displayUploadErrors()
+    // Display errors as array
+    $file->displayUploadErrors()
 
-        // Check if the files uploaded or not
-		if ($file->success()) {
-			// Success
-			echo 'Files have been uploaded';
-		} else {
-			// Failed
-		}
-    }
+    // Check if the files uploaded or not
+    if ($file->success()) {
+	    // Success
+		echo 'Files have been uploaded';
+	} else {
+		// Failed
+	}
+}
 ```
 ``` html
-    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
-	    <input type="file" name="myFile[]" multiple="multiple">
-	    <button type="submit" name="upload">upload</button>
-    </form>
+<form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" enctype="multipart/form-data">
+	<input type="file" name="myFile[]" multiple="multiple">
+	<button type="submit" name="upload">upload</button>
+</form>
 ```
