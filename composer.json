@@ -1,5 +1,5 @@
 {
-    "name": "phpuploader/php-file-uploader",
+    "name": "phpuploader/phpfileuploader",
     "description": "Verify and upload files with php.",
     "license": "MIT",
     "autoload": {
