@@ -1,19 +1,19 @@
 ## PHPFileUploader
-Class to facilitate the process of upload files using PHP.
+Class to facilitate the process of uploading files using PHP.
 
-#### # Features
+### Features
 * Upload single or multiple file.
 * Generate random name for the files.
 * Create a custom name for the files.
 * Files verification.
 
-#### # Installation
+### Installation
 via composer
 ``` bash
 composer require phpuploader/phpfileuploader
 ```
 
-#### # Simple Example
+### Simple Example
 ``` php
 require ('vendor/autoload.php');
 
@@ -22,7 +22,7 @@ $file->path('/files/'); // Specify the files destination path.
 $file->upload(); // move uploaded files (You should call this method at the end).
 ```
 
-#### # Generate random name
+### Generate random name
 You can use this method ```createRandomName()``` to generate a random name for the files.
 If you don't call this method the files will be uploaded with their original name.
 
@@ -34,7 +34,7 @@ $file->createRandomName(); // Generates random name.
 $file->upload();
 ```
 
-#### # Create custom name
+### Create custom name
 You can use this method ```createFileName()``` to create a custom name for the file.
 
 **Example:**
@@ -45,16 +45,15 @@ $file->createFileName('myCustomName'); // Create custom name.
 $file->upload();
 ```
 
-#### # Check errors
+### Check errors
 This method ```displayUploadErrors()``` will return an array with error messages.
 The library will verify the files to check whether the file exists, selected or has been uploaded successfully or not.
 
-#### # Upload multiple file
-* Add this attribute ```multiple="multiple"``` to the **HTML** input file to allow you select multiple file.
-* Make the input name as array ```name="files[]"```.
-* The library will process all the files and upload it.
+### Upload multiple file
+* Add this attribute ```multiple="multiple"``` to the **HTML** input to allow you select multiple file.
+* Make the input name as array ```name="files[]"```. The class will process all the files and upload it to the server.
 
-#### # Full Example with HTML form
+### Full Example with HTML form
 ``` php
 require ('vendor/autoload.php');
 

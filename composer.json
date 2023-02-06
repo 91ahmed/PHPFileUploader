@@ -1,6 +1,6 @@
 {
     "name": "phpuploader/phpfileuploader",
-    "description": "Verify and upload files with php.",
+    "description": "Class to facilitate the process of uploading files using PHP.",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -9,7 +9,7 @@
     },
     "authors": [
         {
-            "name": "ahmedhassan",
+            "name": "ahmed hassan",
             "email": "ahmedh12491@gmail.com"
         }
     ],
