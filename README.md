@@ -51,7 +51,7 @@ The library will verify the files to check whether the file exists, selected or 
 
 ### Upload multiple file
 * Add this attribute ```multiple="multiple"``` to the **HTML** input to allow you select multiple file.
-* Make the input name as array ```name="files[]"```. The class will process all the files and upload it to the server.
+* Make the input name as array ```name="files[]"```. The class will process all the selected files and upload them to the server.
 
 ### Full Example with HTML form
 ``` php
