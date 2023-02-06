@@ -1,5 +1,5 @@
 ## PHPFileUploader
-A simple php library for uploading files.
+Class to facilitate the process of upload files using PHP.
 
 #### # Features
 * Upload single or multiple file.
